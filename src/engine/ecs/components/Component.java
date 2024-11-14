@@ -8,4 +8,11 @@ public class Component {
     public Node getNode() {
         return node;
     }
+
+    public void _setNode(Node node) {
+        this.node = node;
+    }
+
+    public void draw() {}
+    public void init() {}
 }
