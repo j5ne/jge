@@ -19,7 +19,7 @@ public class Main extends Game {
 
         Node newNode = new Node();
         newNode.addComponent(new MeshRenderer(
-                new Rectangle(new Vector2(50,50))
+                new Rectangle(1000,500)
         ));
         newNode.addComponent(new Transform(new Vector3(0,0,0)));
 
@@ -41,5 +41,4 @@ public class Main extends Game {
     public static void main(String[] args) {
         new Main().run();
     }
-
 }

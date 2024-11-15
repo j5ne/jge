@@ -13,12 +13,17 @@ public class Rectangle extends Mesh{
         this.size = size;
     }
 
+    public Rectangle(float width, float height) {
+        this.size.x = width;
+        this.size.y = height;
+    }
+
     @Override
     public void draw(Vector3 position, Vector3 rotation) {
         glPushMatrix();
 
+        System.out.println(position.x);
         glTranslatef(position.x, position.y, position.z);
-        glRotatef(rotation.x, 0.0f, 0.0f, 0.0f);
         glScalef(size.x,size.y,0.0f);
 
         glBegin(GL_QUADS);
