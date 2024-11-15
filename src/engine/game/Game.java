@@ -89,6 +89,11 @@ public class Game {
     public void loop() {
         GL.createCapabilities();
 
+        glMatrixMode(GL_PROJECTION);
+        glLoadIdentity();
+        glOrtho(0, width/2, height/2, 0, -1, 1);  // divide by 2 to correct size
+        glMatrixMode(GL_MODELVIEW);  // Return to modelview matrix
+
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
         while ( !glfwWindowShouldClose(window) ) {

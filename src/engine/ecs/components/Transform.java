@@ -21,4 +21,9 @@ public class Transform extends Component {
         this.position.y = (int) y;
         this.position.z = (int) z;
     }
+
+    public Transform(Vector3 position, Vector3 rotation) {
+        this.position = position;
+        this.rotation = rotation;
+    }
 }

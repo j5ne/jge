@@ -5,6 +5,7 @@ import engine.ecs.components.Transform;
 import engine.game.Game;
 import engine.input.InputManager;
 import engine.nodes.Node;
+import engine.utils.Vector3;
 import org.lwjgl.*;
 
 
@@ -15,8 +16,8 @@ public class Main extends Game {
         init();
 
         Node newNode = new Node();
-        newNode.addComponent(new Rectangle());
-        newNode.addComponent(new Transform(0,0,0));
+        newNode.addComponent(new Rectangle(50,50));
+        newNode.addComponent(new Transform(new Vector3(0,0,0)));
 
         getRoot().addChild(newNode);
 
